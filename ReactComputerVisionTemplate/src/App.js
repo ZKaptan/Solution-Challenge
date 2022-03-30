@@ -54,7 +54,6 @@ function App() {
 			const casted = resized.cast("int32");
 			const expanded = casted.expandDims(0);
 			const obj = await net.executeAsync(expanded);
-			console.log(obj);
 
 			const boxes = await obj[1].array();
 			const classes = await obj[2].array();
@@ -103,8 +102,8 @@ function App() {
 					right: 0,
 					textAlign: "center",
 					zindex: 9,
-					width: 640,
-					height: 480,
+					width: "75%",
+					height: "50%",
 				}}
 			/>
 
